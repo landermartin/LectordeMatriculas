@@ -59,7 +59,7 @@ while True:
             
             cv2.rectangle(frame,(xpi,ypi),(xpf,ypf),(255,255,0),2)
             
-            print('4')
+       
             placa = frame[ypi:ypf,xpi:xpf]
             
             alp,anp,cp = placa.shape
@@ -82,7 +82,7 @@ while True:
             bin=bin.reshape(alp,anp)
             bin =Image.fromarray(bin)
             bin = bin.convert("L")
-            print('5')
+  
             if alp >=36 and anp >= 82:
                 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
                 
